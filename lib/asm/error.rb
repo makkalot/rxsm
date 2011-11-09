@@ -1,0 +1,2 @@
+class AsmSymbolError < Exception
+end

@@ -1,34 +1,44 @@
 # Here you can find classes that represents the instructions
-class Instruction
-  
-  def initialize()
-    @opcode = 0
-    @opcount = 0
-    @oplist = []
+module XSM
+  module Constanst
+    #put here all of the constants
   end
-  
 end
 
-
-class Operand
+module XSM
   
-  def initialize
-    @optype = nil
-    @value = nil
-    @index_offset = 0
+  class Instruction
+
+    def initialize()
+      @mnemonic = ""#mov and etc
+      @opcode = 0
+      @opcount = 0
+      @oplist = []
+    end
+
   end
-  
-end
 
 
-#The extra info provided with script
-class ScriptHeader
-  
-  def initialize
-    @stack_size = 0
-    @global_data_size = 0
-    @main_present = false
-    @main_index
+  class Operand
+
+    def initialize
+      @optype = nil
+      @value = nil
+      @index_offset = 0
+    end
+
   end
-  
+
+
+  #The extra info provided with script
+  class ScriptHeader
+
+    def initialize
+      @stack_size = 0
+      @global_data_size = 0
+      @main_present = false
+      @main_index
+    end
+
+  end
 end
